@@ -21,32 +21,31 @@ func main() {
 		Password: "your_sms_service_password",
 	})
 	if err != nil {
-		panic(err)
+	panic(err)
 	}
 
 	sms := &eskizuz.SMS{
-		MobilePhone: "998946992809",
+		MobilePhone: "998771234567",
 		Message:      "test-message",
-		From:         "go-eskiz-uz",
-		CallbackURL:  "https://oxbox.udevs.io",
+		From:         "eskizuz",
+		CallbackURL:  "https://eskiz.uz",
 	}
-	
-    // Sending message
+
+	// Sending message
 	result, err := eskiz.Send(sms)
 
-    // Refresh token
-    err = eskiz.RefreshToken()
+	// Refresh token
+	err = eskiz.RefreshToken()
 
-    // User info
-    user, err := eskiz.UserInfo()
+	// User info
+	user, err := eskiz.UserInfo()
 
-    // get user limit
-    result, err := eskiz.GetUserLimit()
+	// get user limit
+	result, err := eskiz.GetUserLimit()
 
 }
 ```
 
 
 # Contributing
-If you get errors, please create an issue or pull request.
-
+If you get errors or have suggestions, please create an issue or pull request.
