@@ -38,10 +38,10 @@ func main() {
 	err = eskiz.RefreshToken()
 
 	// User info
-	user, err := eskiz.UserInfo()
+	user, err := eskiz.GetMe()
 
 	// get user limit
-	result, err := eskiz.GetUserLimit()
+	info, err := eskiz.GetUserLimit()
 
 }
 ```
